@@ -76,7 +76,7 @@ class FastText {
   std::shared_ptr<const Matrix> getInputMatrix() const;
   std::shared_ptr<const Matrix> getOutputMatrix() const;
   void saveVectors();
-  void saveModel(const std::string);
+  void saveModel(const std::string&);
   void saveOutput();
   void saveModel();
   void loadModel(std::istream&);

@@ -1,0 +1,24 @@
+# Compiled objects
+*.o
+*.obj
+
+# Compiled binary
+fasttext
+
+# Model files
+*.bin
+*.vec
+*.ftz
+
+# Training data
+big.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

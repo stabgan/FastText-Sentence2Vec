@@ -88,9 +88,14 @@ for line in fin:
         drop = drop + 1.0
 fin.close()
 
-corr = stats.spearmanr(mysim, gold)
-dataset = os.path.basename(args.dataPath)
-print(
-    "{0:20s}: {1:2.0f}  (OOV: {2:2.0f}%)"
-    .format(dataset, corr[0] * 100, math.ceil(drop / nwords * 100.0))
-)
+if nwords == 0.0:
+    print("No words found in the data file.")
+elif len(mysim) == 0:
+    print("No matching word pairs found (100% OOV).")
+else:
+    corr = stats.spearmanr(mysim, gold)
+    dataset = os.path.basename(args.dataPath)
+    print(
+        "{0:20s}: {1:2.0f}  (OOV: {2:2.0f}%)"
+        .format(dataset, corr[0] * 100, math.ceil(drop / nwords * 100.0))
+    )
