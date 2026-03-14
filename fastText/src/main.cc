@@ -194,7 +194,7 @@ void predict(const std::vector<std::string>& args) {
   exit(0);
 }
 
-void printWordVectors(const std::vector<std::string>& args) {
+void printWordVectors(const std::vector<std::string> args) {
   if (args.size() != 3) {
     printPrintWordVectorsUsage();
     exit(EXIT_FAILURE);
@@ -210,7 +210,7 @@ void printWordVectors(const std::vector<std::string>& args) {
   exit(0);
 }
 
-void printSentenceVectors(const std::vector<std::string>& args) {
+void printSentenceVectors(const std::vector<std::string> args) {
   if (args.size() != 3) {
     printPrintSentenceVectorsUsage();
     exit(EXIT_FAILURE);
@@ -226,7 +226,7 @@ void printSentenceVectors(const std::vector<std::string>& args) {
   exit(0);
 }
 
-void printNgrams(const std::vector<std::string>& args) {
+void printNgrams(const std::vector<std::string> args) {
   if (args.size() != 4) {
     printPrintNgramsUsage();
     exit(EXIT_FAILURE);
@@ -237,7 +237,7 @@ void printNgrams(const std::vector<std::string>& args) {
   exit(0);
 }
 
-void nn(const std::vector<std::string>& args) {
+void nn(const std::vector<std::string> args) {
   int32_t k;
   if (args.size() == 3) {
     k = 10;
@@ -272,7 +272,7 @@ void nn(const std::vector<std::string>& args) {
   exit(0);
 }
 
-void analogies(const std::vector<std::string>& args) {
+void analogies(const std::vector<std::string> args) {
   int32_t k;
   if (args.size() == 3) {
     k = 10;
@@ -288,7 +288,7 @@ void analogies(const std::vector<std::string>& args) {
   exit(0);
 }
 
-void train(const std::vector<std::string>& args) {
+void train(const std::vector<std::string> args) {
   Args a = Args();
   a.parseArgs(args);
   FastText fasttext;

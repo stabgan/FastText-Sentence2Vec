@@ -410,7 +410,7 @@ void Dictionary::save(std::ostream& out) const {
     out.write((char*) &(e.count), sizeof(int64_t));
     out.write((char*) &(e.type), sizeof(entry_type));
   }
-  for (const auto& pair : pruneidx_) {
+  for (const auto pair : pruneidx_) {
     out.write((char*) &(pair.first), sizeof(int32_t));
     out.write((char*) &(pair.second), sizeof(int32_t));
   }

@@ -153,7 +153,7 @@ void FastText::saveModel() {
   saveModel(fn);
 }
 
-void FastText::saveModel(const std::string& path) {
+void FastText::saveModel(const std::string path) {
   std::ofstream ofs(path, std::ofstream::binary);
   if (!ofs.is_open()) {
     throw std::invalid_argument(path + " cannot be opened for saving!");
