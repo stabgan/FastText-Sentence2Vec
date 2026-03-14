@@ -1,0 +1,18 @@
+# Build artifacts
+*.o
+fastText/fasttext
+fastText/*.o
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Data
+*.bin
+*.vec
+*.ftz
+data/
+result/
